@@ -7,10 +7,33 @@ import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Button, Link } from '@mui/material';
+import ChevronLeft from '@mui/icons-material/ChevronLeft';
+import ChevronRight from '@mui/icons-material/ChevronRight';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+
+import {
+  Button,
+  Divider,
+  Drawer,
+  Link,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
+const drawerWidth = '240px';
+
+const useStyles = makeStyles({
+  drawer: { width: drawerWidth },
+  drawerPaper: { width: drawerWidth },
+});
 
 const Header = () => {
   const [colour, setColor] = React.useState('black');
+  const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
     if (window.location.pathname === '/') {
@@ -18,6 +41,7 @@ const Header = () => {
     }
   }, []);
 
+  const classes = useStyles();
   return (
     <Box
       sx={{
@@ -45,6 +69,7 @@ const Header = () => {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2, display: { xs: 'block', lg: 'none' } }}
+            onClick={() => setOpen(true)}
           >
             <MenuIcon />
           </IconButton>
@@ -59,7 +84,7 @@ const Header = () => {
               marginRight: { xs: '5%', sm: '8%', md: '10%', lg: '12%' },
               width: '20%',
               fontSize: { xs: '20px', sm: '20px', md: '24px', lg: '24px' },
-              fontFamily: 'Poppins'
+              fontFamily: 'Poppins',
             }}
           >
             KHAMEZ-
@@ -104,40 +129,88 @@ const Header = () => {
           >
             A propos
           </Link>
-
-          <Button
-            sx={{
-              color: 'black',
-              borderRadius: '20%',
-              paddingLeft: 'auto',
-              paddingRight: 'auto',
-            }}
-          >
-            <SearchIcon
-              color="black"
-              sx={{
-                marginLeft: '20px',
-                cursor: 'pointer',
-              }}
-            />
-          </Button>
-          <Button
-            sx={{
-              color: 'black',
-              borderRadius: '20%',
-              paddingLeft: 'auto',
-              paddingRight: 'auto',
-            }}
-          >
-            <ShoppingCartIcon
-              color="black"
-              sx={{
-                marginLeft: '20px',
-                cursor: 'pointer',
-              }}
-            />
-          </Button>
+          <div>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+            >
+              <SearchIcon
+                color="black"
+                sx={{
+                  marginLeft: '20px',
+                  cursor: 'pointer',
+                }}
+              />
+            </IconButton>
+          </div>
+          <div>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+            >
+              <ShoppingCartIcon
+                color="black"
+                sx={{
+                  marginLeft: '20px',
+                  cursor: 'pointer',
+                }}
+              />
+            </IconButton>
+          </div>
         </Toolbar>
+        <Drawer
+          anchor="left"
+          open={open}
+          className={classes.drawer}
+          classes={{ paper: classes.drawerPaper }}
+          onClose={() => setOpen(false)}
+        >
+          <Box sx={{ height: '100%', backgroundColor: '#000a2b' }}>
+            <IconButton
+              size="large"
+              edge="start"
+              color="secondary"
+              aria-label="open drawer"
+              sx={{
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                display: { xs: 'block', lg: 'block' },
+                backgroundColor: '#fe4c50'
+              }}
+              onClick={() => setOpen(false)}
+            >
+              <ChevronLeft />
+            </IconButton>
+            <Divider />
+            <List>
+              <ListItem sx={{ borderBottom: '2px solid #fe4c50' }}>
+                <ListItemIcon>
+                  <HomeIcon color="primary" />
+                </ListItemIcon>
+                <ListItemText>
+                  <Link href="/" sx={{ color: '#ffffff' }} underline="none">
+                    Home
+                  </Link>
+                </ListItemText>
+              </ListItem>
+              <ListItem sx={{ borderBottom: '2px solid #fe4c50' }}>
+                <ListItemIcon>
+                  <InfoIcon color="primary" />
+                </ListItemIcon>
+                <ListItemText>
+                  <Link href="/about" sx={{ color: '#ffffff' }} underline="none">
+                    About
+                  </Link>
+                </ListItemText>
+              </ListItem>
+            </List>
+          </Box>
+        </Drawer>
       </AppBar>
     </Box>
   );

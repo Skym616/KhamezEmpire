@@ -37,13 +37,14 @@ const Jumbotron = () => {
             marginLeft: { lg: '7%' },
             marginRight: { lg: 'auto' },
             marginTop: { lg: '10%', xs: '35%' },
-            padding: '20px'
+            padding: '20px',
           }}
         >
           <Typography
             variant={{ xs: 'h4', lg: 'h3' }}
             sx={{
-              fontSize: { xs: '30px', lg: '50px', color: '#000' },
+              fontSize: { xs: '30px', lg: '50px' },
+              color: '#000',
               backgroundColor: { xs: 'rgba(255,255,255,0.2)' },
             }}
           >
