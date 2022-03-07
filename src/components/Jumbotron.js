@@ -37,12 +37,16 @@ const Jumbotron = () => {
             marginLeft: { lg: '7%' },
             marginRight: { lg: 'auto' },
             marginTop: { lg: '10%' },
-            marginTop: { lg: '10%', xs: '15%' },
+            marginTop: { lg: '10%', xs: '35%' },
+            padding: '20px'
           }}
         >
           <Typography
             variant={{ xs: 'h4', lg: 'h3' }}
-            sx={{ fontSize: { xs: '30px', lg: '50px', color: '#ffffff' } }}
+            sx={{
+              fontSize: { xs: '30px', lg: '50px', color: '#ffffff' },
+              backgroundColor: { xs: 'rgba(0,0,0,0.4)' },
+            }}
           >
             Sur{' '}
             <Typography
@@ -74,7 +78,6 @@ const Jumbotron = () => {
             lg="6"
             xs="12"
             sx={{
-              backgroundColor: { xs: 'rgba(0,0,0,0.4)' },
               width: { lg: '80%' },
               marginLeft: { lg: '10%' },
               marginRight: { lg: 'auto' },
