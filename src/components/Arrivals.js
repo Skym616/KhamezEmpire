@@ -44,7 +44,7 @@ const Arrivals = () => {
             variant="outlined"
             aria-label="outlined button group"
             size="large"
-            sx={{ backgroundColor: '#ffffff' }}
+            sx={{ backgroundColor: '#ffffff', overflowX: { xs: 'scroll' } }}
           >
             <Button
               sx={{
@@ -92,7 +92,7 @@ const Arrivals = () => {
                     color: '#ffffff',
                     height: '10px',
                     borderTopRightRadius: '20px',
-                    borderBottomLeftRadius: '20px'
+                    borderBottomLeftRadius: '20px',
                   }}
                 />
                 <CardMedia
@@ -121,7 +121,11 @@ const Arrivals = () => {
                   <Button
                     variant="contained"
                     fullWidth
-                    sx={{ borderRadius: 0, marginTop: '10px' ,backgroundColor: '#c40027'}}
+                    sx={{
+                      borderRadius: 0,
+                      marginTop: '10px',
+                      backgroundColor: '#c40027',
+                    }}
                   >
                     Add to Cart
                   </Button>
