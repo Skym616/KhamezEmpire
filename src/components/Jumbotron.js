@@ -36,7 +36,6 @@ const Jumbotron = () => {
             width: { lg: '80%' },
             marginLeft: { lg: '7%' },
             marginRight: { lg: 'auto' },
-            marginTop: { lg: '10%' },
             marginTop: { lg: '10%', xs: '35%' },
             padding: '20px'
           }}
@@ -45,7 +44,7 @@ const Jumbotron = () => {
             variant={{ xs: 'h4', lg: 'h3' }}
             sx={{
               fontSize: { xs: '30px', lg: '50px', color: '#ffffff' },
-              backgroundColor: { xs: 'rgba(0,0,0,0.4)' },
+              backgroundColor: { xs: 'rgba(0,0,0,0.1)' },
             }}
           >
             Sur{' '}
@@ -56,7 +55,7 @@ const Jumbotron = () => {
             >
               Khamez Empire{' '}
             </Typography>
-            achetez en gros et/ou en détail et faites vous livrez dans de bref
+            achetez en gros et/ou en détail et faites vous livrer dans de bref
             délais
           </Typography>
         </Grid>
@@ -81,7 +80,7 @@ const Jumbotron = () => {
               width: { lg: '80%' },
               marginLeft: { lg: '10%' },
               marginRight: { lg: 'auto' },
-              marginTop: { lg: '10%', xs: '15%' },
+              marginTop: { lg: '10%', xs: '35%' },
             }}
           >
             <Typography

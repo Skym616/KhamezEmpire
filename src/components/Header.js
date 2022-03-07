@@ -59,6 +59,7 @@ const Header = () => {
               marginRight: { xs: '5%', sm: '8%', md: '10%', lg: '12%' },
               width: '20%',
               fontSize: { xs: '20px', sm: '20px', md: '24px', lg: '24px' },
+              fontFamily: 'Poppins'
             }}
           >
             KHAMEZ-
