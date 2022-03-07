@@ -30,20 +30,30 @@ const Jumbotron = () => {
       >
         <Grid
           container
-          lg="6"
+          lg="5"
           xs="12"
           sx={{
-            backgroundColor: 'rgba(0,0,0,0.5)',
-            color: '#ffffff',
             width: { lg: '80%' },
-            marginLeft: { lg: '10%' },
+            marginLeft: { lg: '7%' },
             marginRight: { lg: 'auto' },
             marginTop: { lg: '10%' },
+            marginTop: { lg: '10%', xs: '15%' },
           }}
         >
-          <Typography variant="h3">
-            Sur Khamez Empire achetez en gros et/ou en détail et faites vous
-            livrez dans de bref délais
+          <Typography
+            variant={{ xs: 'h4', lg: 'h3' }}
+            sx={{ fontSize: { xs: '30px', lg: '50px', color: '#ffffff' } }}
+          >
+            Sur{' '}
+            <Typography
+              variant={{ xs: 'h4', lg: 'h3' }}
+              component="span"
+              sx={{ color: '#c40027' }}
+            >
+              Khamez Empire{' '}
+            </Typography>
+            achetez en gros et/ou en détail et faites vous livrez dans de bref
+            délais
           </Typography>
         </Grid>
       </Card>
@@ -64,21 +74,25 @@ const Jumbotron = () => {
             lg="6"
             xs="12"
             sx={{
+              backgroundColor: { xs: 'rgba(0,0,0,0.4)' },
               width: { lg: '80%' },
               marginLeft: { lg: '10%' },
               marginRight: { lg: 'auto' },
-              marginTop: { lg: '10%' },
+              marginTop: { lg: '10%', xs: '15%' },
             }}
           >
-            <Typography variant="h3">
+            <Typography
+              variant={{ xs: 'h4', lg: 'h3' }}
+              sx={{ fontSize: { xs: '30px', lg: '50px' } }}
+            >
               <Typography
-                variant="h3"
+                variant={{ xs: 'h4', lg: 'h3' }}
                 component="span"
                 sx={{ color: '#c40027' }}
               >
-                Khamze Empire 
-              </Typography>
-              , est votre plateforme idéale de shooping, ce en vous proposant un
+                Khamez Empire
+              </Typography>{' '}
+              est votre plateforme idéale de shooping, ce en vous proposant un
               catalogue varié d'article de qualités présentés dans les moindres
               détails.
             </Typography>

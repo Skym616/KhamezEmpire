@@ -144,7 +144,7 @@ const Footer = () => {
                 color="rgb(233, 233, 233)"
                 sx={{ textAlign: 'center' }}
               >
-                Disponible 24h/24
+                Disponible 24h/7j
               </Typography>
             </Box>
           </Box>
@@ -169,7 +169,7 @@ const Footer = () => {
           sx={{ backgroundColor: '#ffffff', marginTop: '10px' }}
           onClick={() =>
             window.open(
-              'https://wa.me/237677279337?text=Salut, Khamez Empire J\'ai une préoccupation'
+              'https://wa.me/237697015038?text=Salut Khamez Empire J\'ai une préoccupation qui est la suivante :'
             )
           }
         >
