@@ -43,8 +43,8 @@ const Jumbotron = () => {
           <Typography
             variant={{ xs: 'h4', lg: 'h3' }}
             sx={{
-              fontSize: { xs: '30px', lg: '50px', color: '#ffffff' },
-              backgroundColor: { xs: 'rgba(0,0,0,0.1)' },
+              fontSize: { xs: '30px', lg: '50px', color: '#000' },
+              backgroundColor: { xs: 'rgba(255,255,255,0.2)' },
             }}
           >
             Sur{' '}
