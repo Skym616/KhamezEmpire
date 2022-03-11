@@ -150,7 +150,7 @@ const Footer = () => {
       <Box
         sx={{
           backgroundColor: '#c40027',
-          height: '100px',
+          height: 'auto',
           marginTop: '10px',
           paddingLeft: 'auto',
           paddingRight: 'auto',
@@ -166,13 +166,13 @@ const Footer = () => {
           sx={{ backgroundColor: '#ffffff', marginTop: '10px' }}
           onClick={() =>
             window.open(
-              'https://wa.me/237697015038?text=Salut Khamez Empire J\'ai une préoccupation qui est la suivante :'
+              'https://wa.me/237697015038?text=Salut Thank you for contacting Khamez Empire. How can we help you today?'
             )
           }
         >
           Whatsapp
         </Button>
-        <Typography variant='h6' sx={{ color: '#ffffff', margin: '20px' }}>
+        <Typography variant='h6' sx={{ color: '#ffff', marginTop: '20px', fontFamily: 'poppins' }}>
           Bringing the world closer
         </Typography>
       </Box>

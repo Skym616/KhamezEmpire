@@ -1,15 +1,14 @@
 import {
-  Typography,
-  Grid,
-  Container,
-  ButtonGroup,
-  Button,
   Box,
+  Button,
+  ButtonGroup,
   Card,
-  CardActionArea,
-  CardMedia,
   CardContent,
-  CardHeader
+  CardHeader,
+  CardMedia,
+  Container,
+  Grid,
+  Typography
 } from '@mui/material';
 import list from '../data/ListArrival';
 import '../styles/style.css';
@@ -24,7 +23,8 @@ const Arrivals = () => {
           marginLeft: 'auto',
           borderBottom: '3px solid #fe4c50',
           width: 'max-content',
-          fontWeight: '500'
+          fontWeight: '500',
+          fontFamily: 'poppins'
         }}
       >
         New Arrivals

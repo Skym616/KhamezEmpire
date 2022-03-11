@@ -8,27 +8,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
-import ChevronRight from '@mui/icons-material/ChevronRight';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 
-import {
-  Button,
-  Divider,
-  Drawer,
-  Link,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from '@mui/material';
+import { Divider, Drawer, Link, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const drawerWidth = '240px';
 
 const useStyles = makeStyles({
   drawer: { width: drawerWidth },
-  drawerPaper: { width: drawerWidth },
+  drawerPaper: { width: drawerWidth }
 });
 
 const Header = () => {
@@ -49,122 +39,123 @@ const Header = () => {
         position: { lg: 'fixed' },
         zIndex: { lg: 1 },
         right: { lg: 0 },
-        left: { lg: 0 },
+        left: { lg: 0 }
       }}
     >
       <AppBar
-        position="static"
-        color="white"
+        position='static'
+        color='white'
         sx={{
           height: '80px',
           paddingTop: '10px',
           paddingLeft: { xs: '5%', sm: '5%', md: '5%', lg: '10%' },
-          paddingRight: { lg: '10%' },
+          paddingRight: { lg: '10%' }
         }}
       >
         <Toolbar>
           <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
+            size='large'
+            edge='start'
+            color='inherit'
+            aria-label='open drawer'
             sx={{ mr: 2, display: { xs: 'block', lg: 'none' } }}
             onClick={() => setOpen(true)}
           >
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant='h6'
             noWrap
-            color="primary"
-            component="div"
+            color='primary'
+            component='div'
             sx={{
               flexGrow: 1,
               display: { xs: 'block', sm: 'block' },
               marginRight: { xs: '5%', sm: '8%', md: '10%', lg: '12%' },
               width: '20%',
               fontSize: { xs: '20px', sm: '20px', md: '24px', lg: '24px' },
-              fontFamily: 'Poppins',
+              fontFamily: 'poppins'
             }}
           >
             KHAMEZ-
             <Typography
-              variant="h6"
+              variant='h6'
               sx={{
                 color: 'black',
                 display: { xs: 'block', sm: 'inline' },
                 fontSize: { xs: '20px', sm: '20px', md: '24px', lg: '24px' },
+                fontFamily: 'poppins'
               }}
             >
               EMPIRE
             </Typography>
           </Typography>
           <Link
-            component="button"
-            variant="body2"
-            underline="hover"
+            component='button'
+            variant='body2'
+            underline='hover'
             sx={{
               display: { xs: 'none', lg: 'block' },
               color: colour,
               fontSize: '20px',
-              padding: '20px',
+              padding: '20px'
             }}
             // onClick={() => navigate('/about')}
           >
             Home
           </Link>
           <Link
-            component="button"
-            variant="body2"
-            underline="hover"
+            component='button'
+            variant='body2'
+            underline='hover'
             sx={{
               display: { xs: 'none', lg: 'block' },
               color: 'black',
               fontSize: '20px',
-              padding: '20px',
+              padding: '20px'
             }}
             onClick={() => {
-              console.info("I'm a button.");
+              console.info('I\'m a button.');
             }}
           >
             A propos
           </Link>
           <div>
             <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
+              size='large'
+              edge='start'
+              color='inherit'
+              aria-label='open drawer'
             >
               <SearchIcon
-                color="black"
+                color='black'
                 sx={{
                   marginLeft: '20px',
-                  cursor: 'pointer',
+                  cursor: 'pointer'
                 }}
               />
             </IconButton>
           </div>
           <div>
             <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
+              size='large'
+              edge='start'
+              color='inherit'
+              aria-label='open drawer'
               sx={{ mr: 2 }}
             >
               <ShoppingCartIcon
-                color="black"
+                color='black'
                 sx={{
                   marginLeft: '20px',
-                  cursor: 'pointer',
+                  cursor: 'pointer'
                 }}
               />
             </IconButton>
           </div>
         </Toolbar>
         <Drawer
-          anchor="left"
+          anchor='left'
           open={open}
           className={classes.drawer}
           classes={{ paper: classes.drawerPaper }}
@@ -172,10 +163,10 @@ const Header = () => {
         >
           <Box sx={{ height: '100%', backgroundColor: '#000a2b' }}>
             <IconButton
-              size="large"
-              edge="start"
-              color="secondary"
-              aria-label="open drawer"
+              size='large'
+              edge='start'
+              color='secondary'
+              aria-label='open drawer'
               sx={{
                 marginLeft: 'auto',
                 marginRight: 'auto',
@@ -190,20 +181,20 @@ const Header = () => {
             <List>
               <ListItem sx={{ borderBottom: '2px solid #fe4c50' }}>
                 <ListItemIcon>
-                  <HomeIcon color="primary" />
+                  <HomeIcon color='primary' />
                 </ListItemIcon>
                 <ListItemText>
-                  <Link href="/" sx={{ color: '#ffffff' }} underline="none">
+                  <Link href='/' sx={{ color: '#ffffff' }} underline='none'>
                     Home
                   </Link>
                 </ListItemText>
               </ListItem>
               <ListItem sx={{ borderBottom: '2px solid #fe4c50' }}>
                 <ListItemIcon>
-                  <InfoIcon color="primary" />
+                  <InfoIcon color='primary' />
                 </ListItemIcon>
                 <ListItemText>
-                  <Link href="/about" sx={{ color: '#ffffff' }} underline="none">
+                  <Link href='/about' sx={{ color: '#ffffff' }} underline='none'>
                     About
                   </Link>
                 </ListItemText>

@@ -45,14 +45,15 @@ const Jumbotron = () => {
             sx={{
               fontSize: { xs: '30px', lg: '50px' },
               color: '#000',
-              backgroundColor: { xs: 'rgba(255,255,255,0.2)' }
+              backgroundColor: { xs: 'rgba(255,255,255,0.2)' },
+              fontFamily: 'poppins'
             }}
           >
             Sur{' '}
             <Typography
               variant={{ xs: 'h4', lg: 'h3' }}
               component='span'
-              sx={{ color: '#c40027' }}
+              sx={{ color: '#c40027', fontFamily: 'poppins' }}
             >
               Khamez Empire{' '}
             </Typography>
@@ -86,7 +87,7 @@ const Jumbotron = () => {
           >
             <Typography
               variant={{ xs: 'h4', lg: 'h3' }}
-              sx={{ fontSize: { xs: '30px', lg: '50px' } }}
+              sx={{ fontSize: { xs: '30px', lg: '50px' }, fontFamily: 'poppins' }}
             >
               <Typography
                 variant={{ xs: 'h4', lg: 'h3' }}
