@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
+import { Card, CardContent, Grid, Typography } from '@mui/material';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -11,7 +11,7 @@ const settings = {
   autoplay: true,
   speed: 4000,
   autoplaySpeed: 4000,
-  fade: true,
+  fade: true
 };
 
 const Jumbotron = () => {
@@ -25,19 +25,19 @@ const Jumbotron = () => {
           height: '700px',
           backgroundRepeat: 'no-repeat',
           backgroundSize: { xs: 'cover', lg: 'cover' },
-          backgroundPosition: 'center center',
+          backgroundPosition: 'center center'
         }}
       >
         <Grid
           container
-          lg="5"
-          xs="12"
+          lg='5'
+          xs='12'
           sx={{
             width: { lg: '80%' },
             marginLeft: { lg: '7%' },
             marginRight: { lg: 'auto' },
             marginTop: { lg: '10%', xs: '35%' },
-            padding: '20px',
+            padding: '20px'
           }}
         >
           <Typography
@@ -45,13 +45,13 @@ const Jumbotron = () => {
             sx={{
               fontSize: { xs: '30px', lg: '50px' },
               color: '#000',
-              backgroundColor: { xs: 'rgba(255,255,255,0.2)' },
+              backgroundColor: { xs: 'rgba(255,255,255,0.2)' }
             }}
           >
             Sur{' '}
             <Typography
               variant={{ xs: 'h4', lg: 'h3' }}
-              component="span"
+              component='span'
               sx={{ color: '#c40027' }}
             >
               Khamez Empire{' '}
@@ -69,19 +69,19 @@ const Jumbotron = () => {
           height: '700px',
           backgroundRepeat: 'no-repeat',
           backgroundSize: { xs: 'cover', lg: 'cover' },
-          backgroundPosition: 'center center',
+          backgroundPosition: 'center center'
         }}
       >
         <CardContent>
           <Grid
             container
-            lg="6"
-            xs="12"
+            lg='6'
+            xs='12'
             sx={{
               width: { lg: '80%' },
               marginLeft: { lg: '10%' },
               marginRight: { lg: 'auto' },
-              marginTop: { lg: '10%', xs: '35%' },
+              marginTop: { lg: '10%', xs: '35%' }
             }}
           >
             <Typography
@@ -90,14 +90,14 @@ const Jumbotron = () => {
             >
               <Typography
                 variant={{ xs: 'h4', lg: 'h3' }}
-                component="span"
+                component='span'
                 sx={{ color: '#c40027' }}
               >
                 Khamez Empire
               </Typography>{' '}
-              est votre plateforme idéale de shooping, ce en vous proposant un
-              catalogue varié d'article de qualités présentés dans les moindres
-              détails.
+              est votre plateforme idéale de shooping. <br />
+              "Bringing the world closer"<br />
+              Making things easier.
             </Typography>
           </Grid>
         </CardContent>

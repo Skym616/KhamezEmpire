@@ -9,7 +9,7 @@ import {
   CardActionArea,
   CardMedia,
   CardContent,
-  CardHeader,
+  CardHeader
 } from '@mui/material';
 import list from '../data/ListArrival';
 import '../styles/style.css';
@@ -18,13 +18,13 @@ const Arrivals = () => {
   return (
     <Container sx={{ marginTop: '20px' }}>
       <Typography
-        variant="h4"
+        variant='h4'
         sx={{
           marginRight: 'auto',
           marginLeft: 'auto',
           borderBottom: '3px solid #fe4c50',
           width: 'max-content',
-          fontWeight: '500',
+          fontWeight: '500'
         }}
       >
         New Arrivals
@@ -37,20 +37,20 @@ const Arrivals = () => {
             alignItems: 'center',
             marginTop: '30px',
             marginLeft: 'auto',
-            marginRight: 'auto',
+            marginRight: 'auto'
           }}
         >
           <ButtonGroup
-            variant="outlined"
-            aria-label="outlined button group"
-            size="large"
+            variant='outlined'
+            aria-label='outlined button group'
+            size='large'
             sx={{ backgroundColor: '#ffffff', overflowX: { xs: 'scroll' } }}
           >
             <Button
               sx={{
                 borderColor: 'rgb(233, 233, 233)',
                 color: 'black',
-                backgroundColor: '#fffff',
+                backgroundColor: '#fffff'
               }}
             >
               All
@@ -79,52 +79,52 @@ const Arrivals = () => {
                   cursor: 'pointer',
                   marginBottom: '40px',
                   marginLeft: { xs: 'auto' },
-                  marginRight: { xs: 'auto' },
+                  marginRight: { xs: 'auto' }
                 }}
                 elevation={0}
-                className="card"
+                className='card'
               >
                 <CardHeader
-                  subheader="20pcs"
+                  subheader='20pcs'
                   sx={{
                     backgroundColor: '#ff817c',
                     width: 'max-content',
                     color: '#ffffff',
                     height: '10px',
                     borderTopRightRadius: '20px',
-                    borderBottomLeftRadius: '20px',
+                    borderBottomLeftRadius: '20px'
                   }}
                 />
                 <CardMedia
-                  component="img"
-                  height="140"
+                  component='img'
+                  height='140'
                   image={item.image}
-                  alt="green iguana"
+                  alt='green iguana'
                 />
                 <CardContent>
                   <Typography
                     gutterBottom
-                    variant="h6"
-                    component="div"
-                    color="primary"
+                    variant='h6'
+                    component='div'
+                    color='primary'
                     sx={{ textAlign: 'center' }}
                   >
                     {item.price}
                   </Typography>
                   <Typography
-                    variant="body2"
-                    color="text.secondary"
+                    variant='body2'
+                    color='text.secondary'
                     sx={{ textAlign: 'center' }}
                   >
                     {item.name}
                   </Typography>
                   <Button
-                    variant="contained"
+                    variant='contained'
                     fullWidth
                     sx={{
                       borderRadius: 0,
                       marginTop: '10px',
-                      backgroundColor: '#c40027',
+                      backgroundColor: '#c40027'
                     }}
                   >
                     Add to Cart
