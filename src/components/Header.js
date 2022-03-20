@@ -1,18 +1,19 @@
 import * as React from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
 import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-
-import { Divider, Drawer, Link, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import Badge from '@mui/material/Badge';
+import { Divider, Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { useNavigate } from 'react-router-dom';
+import { useBadgeContext } from '../contexts/BadgeContext';
 
 const drawerWidth = '240px';
 
@@ -22,8 +23,10 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
-  const [colour, setColor] = React.useState('black');
-  const [open, setOpen] = React.useState(false);
+  const badgeContext = useBadgeContext();
+  const navigate = useNavigate();
+  const [colour, setColor] = useState('black');
+  const [open, setOpen] = useState(false);
 
   React.useEffect(() => {
     if (window.location.pathname === '/') {
@@ -90,21 +93,22 @@ const Header = () => {
               EMPIRE
             </Typography>
           </Typography>
-          <Link
-            component='button'
-            variant='body2'
-            underline='hover'
-            sx={{
-              display: { xs: 'none', lg: 'block' },
-              color: colour,
-              fontSize: '20px',
-              padding: '20px'
-            }}
-            // onClick={() => navigate('/about')}
-          >
-            Home
-          </Link>
-          <Link
+          <List>
+            <ListItem
+              onClick={() => navigate('/')}
+              sx={{
+                display: { xs: 'none', lg: 'block' },
+                color: colour,
+                fontSize: '20px',
+                padding: '20px',
+                cursor: 'pointer',
+                fontFamily: 'poppins'
+              }}>
+              Accueil
+            </ListItem>
+          </List>
+
+          {/*    <Link
             component='button'
             variant='body2'
             underline='hover'
@@ -119,8 +123,8 @@ const Header = () => {
             }}
           >
             A propos
-          </Link>
-          <div>
+          </Link>*/}
+          {/*  <div>
             <IconButton
               size='large'
               edge='start'
@@ -135,22 +139,24 @@ const Header = () => {
                 }}
               />
             </IconButton>
-          </div>
+          </div>*/}
           <div>
             <IconButton
               size='large'
               edge='start'
               color='inherit'
               aria-label='open drawer'
-              sx={{ mr: 2 }}
+              onClick={() => navigate('/cart')}
             >
-              <ShoppingCartIcon
-                color='black'
-                sx={{
-                  marginLeft: '20px',
-                  cursor: 'pointer'
-                }}
-              />
+              <Badge color='primary' badgeContent={badgeContext.value}>
+                <ShoppingCartIcon
+                  color='black'
+                  sx={{
+                    marginLeft: '20px',
+                    cursor: 'pointer'
+                  }}
+                />
+              </Badge>
             </IconButton>
           </div>
         </Toolbar>
@@ -161,7 +167,7 @@ const Header = () => {
           classes={{ paper: classes.drawerPaper }}
           onClose={() => setOpen(false)}
         >
-          <Box sx={{ height: '100%', backgroundColor: '#000a2b' }}>
+          <Box sx={{ height: '100%', backgroundColor: '#ffffff', pt: '20px' }}>
             <IconButton
               size='large'
               edge='start'
@@ -179,17 +185,15 @@ const Header = () => {
             </IconButton>
             <Divider />
             <List>
-              <ListItem sx={{ borderBottom: '2px solid #fe4c50' }}>
+              <ListItem sx={{ borderBottom: '2px solid #f9f9f9', cursor: 'pointer' }} onClick={() => navigate('/')}>
                 <ListItemIcon>
                   <HomeIcon color='primary' />
                 </ListItemIcon>
-                <ListItemText>
-                  <Link href='/' sx={{ color: '#ffffff' }} underline='none'>
-                    Home
-                  </Link>
+                <ListItemText sx={{ color: '#000' }}>
+                  Accueil
                 </ListItemText>
               </ListItem>
-              <ListItem sx={{ borderBottom: '2px solid #fe4c50' }}>
+              {/* <ListItem sx={{ borderBottom: '2px solid #fe4c50' }}>
                 <ListItemIcon>
                   <InfoIcon color='primary' />
                 </ListItemIcon>
@@ -198,7 +202,7 @@ const Header = () => {
                     About
                   </Link>
                 </ListItemText>
-              </ListItem>
+              </ListItem>*/}
             </List>
           </Box>
         </Drawer>

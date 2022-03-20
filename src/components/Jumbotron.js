@@ -18,52 +18,7 @@ const Jumbotron = () => {
   return (
     <Slider {...settings}>
       <Card
-        elevation={1}
-        sx={{
-          backgroundImage: 'url(../../assets/image/banner.jpg)',
-          marginTop: { lg: '100px', xs: '20px' },
-          height: '700px',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: { xs: 'cover', lg: 'cover' },
-          backgroundPosition: 'center center'
-        }}
-      >
-        <Grid
-          container
-          lg='5'
-          xs='12'
-          sx={{
-            width: { lg: '80%' },
-            marginLeft: { lg: '7%' },
-            marginRight: { lg: 'auto' },
-            marginTop: { lg: '10%', xs: '35%' },
-            padding: '20px'
-          }}
-        >
-          <Typography
-            variant={{ xs: 'h4', lg: 'h3' }}
-            sx={{
-              fontSize: { xs: '30px', lg: '50px' },
-              color: '#000',
-              backgroundColor: { xs: 'rgba(255,255,255,0.2)' },
-              fontFamily: 'poppins'
-            }}
-          >
-            Sur{' '}
-            <Typography
-              variant={{ xs: 'h4', lg: 'h3' }}
-              component='span'
-              sx={{ color: '#c40027', fontFamily: 'poppins' }}
-            >
-              Khamez Empire{' '}
-            </Typography>
-            achetez en gros et/ou en détail et faites vous livrer dans de bref
-            délais
-          </Typography>
-        </Grid>
-      </Card>
-      <Card
-        elevation={1}
+        elevation={0}
         sx={{
           backgroundImage: 'url(../../assets/image/slider_1.jpg)',
           marginTop: { lg: '100px', xs: '20px' },
@@ -77,22 +32,28 @@ const Jumbotron = () => {
           <Grid
             container
             lg='6'
+            md='6'
+            sm='12'
             xs='12'
             sx={{
-              width: { lg: '80%' },
-              marginLeft: { lg: '10%' },
-              marginRight: { lg: 'auto' },
-              marginTop: { lg: '10%', xs: '35%' }
+              width: { lg: '80%', md: '80%', sm: '80%' },
+              marginLeft: { lg: '50%', md: '50%', sm: '50%' },
+              marginRight: { lg: 'auto', md: 'auto', sm: 'auto' },
+              marginTop: { lg: '10%', md: '10%', sm: '10%', xs: '35%' }
             }}
           >
             <Typography
-              variant={{ xs: 'h4', lg: 'h3' }}
-              sx={{ fontSize: { xs: '30px', lg: '50px' }, fontFamily: 'poppins' }}
+              variant='h3'
+              sx={{
+                fontSize: { xs: '30px', lg: '50px' },
+                fontFamily: 'poppins',
+                backgroundColor: { xs: 'rgba(255,255,255,0.4)' }
+              }}
             >
               <Typography
-                variant={{ xs: 'h4', lg: 'h3' }}
+                variant='h3'
                 component='span'
-                sx={{ color: '#c40027' }}
+                sx={{ color: '#c40027', fontSize: { xs: '30px', lg: '50px' } }}
               >
                 Khamez Empire
               </Typography>{' '}
@@ -102,6 +63,54 @@ const Jumbotron = () => {
             </Typography>
           </Grid>
         </CardContent>
+      </Card>
+      <Card
+        elevation={0}
+        sx={{
+          backgroundImage: 'url(../../assets/image/banner.jpg)',
+          marginTop: { lg: '100px', xs: '20px' },
+          height: '700px',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: { xs: 'cover', lg: 'cover' },
+          backgroundPosition: 'center center'
+        }}
+      >
+        <Grid
+          container
+          lg='5'
+          md='5'
+          sm='12'
+          xs='12'
+          sx={{
+            width: { lg: '80%', md: '80%' },
+            marginLeft: { lg: '7%', md: '7%' },
+            marginRight: { lg: 'auto', md: 'auto' },
+            marginTop: { lg: '10%', md: '10%', xs: '35%' },
+            padding: '20px'
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: { xs: '30px', lg: '50px' },
+              color: '#000',
+              backgroundColor: { xs: 'rgba(255,255,255,0.2)' },
+              fontFamily: 'poppins'
+            }}
+          >
+            Sur{' '}
+            <Typography
+              variant='h3'
+              component='span'
+              sx={{
+                color: '#c40027', fontFamily: 'poppins', fontSize: { xs: '30px', lg: '50px' }
+              }}
+            >
+              Khamez Empire{' '}
+            </Typography>
+            achetez en gros et/ou en détail et faites vous livrer dans de bref
+            délais
+          </Typography>
+        </Grid>
       </Card>
     </Slider>
   );
