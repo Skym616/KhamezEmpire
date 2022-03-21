@@ -40,9 +40,11 @@ const ShoppingCart = () => {
   };
 
   const increment = (item) => {
-    item.qt += 1;
-    window.sessionStorage.setItem('pannier', JSON.stringify(products));
-    setRefresh(!refresh);
+    if (item.quantity > item.qt) {
+      item.qt += 1;
+      window.sessionStorage.setItem('pannier', JSON.stringify(products));
+      setRefresh(!refresh);
+    }
   };
 
   const decrement = (item) => {
