@@ -69,7 +69,7 @@ const ShoppingCart = () => {
       dateOrdered: new Date().toLocaleString(),
       status: ''
     };
-    axios.post('http://localhost:8080/ordered', ordered).then((res) => {
+    axios.post('https://khamez-empire-api.herokuapp.com/ordered', ordered).then((res) => {
       const orderedObj = { ...ordered, numberBill: res.data.message };
       window.setTimeout(() => {
         window.sessionStorage.setItem('pdf', JSON.stringify(orderedObj));

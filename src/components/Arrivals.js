@@ -39,7 +39,7 @@ const Arrivals = () => {
 
   const getProducts = () => {
     axios
-      .get('http://localhost:8080/products')
+      .get('https://khamez-empire-api.herokuapp.com/products')
       .then((response) => {
         const products = response.data.products;
         let tab = [];

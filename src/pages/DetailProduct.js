@@ -15,7 +15,7 @@ const DetailProduct = (props) => {
   }, []);
 
   const getProduct = () => {
-    axios.get('http://localhost:8080/products/' + idProduct)
+    axios.get('https://khamez-empire-api.herokuapp.com/' + idProduct)
       .then((response) => {
         setProduct(response.data.product);
         setCircular(false);
